@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="H_XUW3Vr8q12W7DTVdqfZcX2aYmXG0FYsaWR4ZEolBA" />
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script>
+        function ddlselect()
+        {
+        var d=document.getElementById("ddselect");
+        var displaytext=d.options[d.selectedIndex].text;
+        document.getElementById("txtvalue").value=displaytext;    
+        }
+    </script>
+    
+   </head>
+<body>
+    <div class="container">
+        <h1 class="brand"><span>Logo</span> Bus Service <br></h1> 
+        <h3 class="brand">Information</br> for <span>Price</span> (Explanation)</h3>
+        <div class="wrapper animated bounceInLeft">
+            <div class="company-info">
+                <a href="#"><h3>Time Schedule</h3></a>
+                Address<br/>
+                Tell:<a href="mailto:...@gmail.com">Mail</a>
+                <a href="https://wa.me/number here" target="_blank"><img draggable="false" class="emoji" alt="☎️" src="https://s.w.org/images/core/emoji/12.0.0-1/svg/260e.svg"> WhatsApp</a>                    
+            </div>
+            <div class="contact">
+                
+                <form  id="form" action="#" method="POST">
+                    <p>
+                        <label>Name and Surname</label>
+                        <input class="name" type="text" name="Name" required>
+                    </p> 
+                    <br/>
+                    <p>
+                        <label>Number of Passengers</label>
+                        <input class="person" type="number" name="Person" required>
+                    </p> 
+                    <br/>
+                    <p>
+                        <label>Hotel Name</label>
+                        <input class="Hotel" type="text" name="Hotel" required>
+                    </p>
+                    <br/>
+                    <p>
+                        <label>Room Number</label>
+                        <input class="room" type="text" name="Room" required>
+                    </p>
+                    <br/>
+                    <p>
+                        <select id="ddselect" onchange="ddlselect();">
+                            <option>--Select Pick-up Time--</option>
+                            <option>04.20-04:30 (Departure for 06:00)</option>
+                            <option>05.20-05.30 (Departure for 07:00)</option>
+                            <option>06.20-06.30 (Departure for 08:00)</option>
+                            <option>07.20-07.30 (Departure for 09:00)</option>
+                            <option>08.20-08.30 (Departure for 10:00)</option>
+                            <option>09.20-09.30 (Departure for 11:00)</option>
+                            <option>10.20-10.30 (Departure for 12:00)</option>
+                            <option>11.20-11.30 (Departure for 13:00)</option>
+                            <option>12.20-12.30 (Departure for 14:00)</option>
+                            <option>13.20-13.30 (Departure for 15:00)</option>
+                            <option>14.20-14.30 (Departure for 16:00)</option>
+                            <option>15.20-15.30 (Departure for 17:00)</option>
+                            <option>16.20-16.30 (Departure for 18:00)</option>
+                        </select>
+                    </p>
+                    <br/>
+                    <p>
+                        <label>Pick-up Time</label>
+                        <input id="txtvalue" type="text" name="Pick-up" required>
+                    </p>
+                    <br/>
+                    <p>
+                        <label>Date </label>
+                        <input type="text" size="30" class="date" type="text" name="Date" id="datepicker" required>
+                    </p>
+                    <br/>
+                    <p>
+                        <label>E-mail Address</label>
+                        <input class="email" type="text" name="mail" id="email" required>
+                    </p>
+                    <br/>
+                    <p>
+                        <label>Message</label>
+                        <textarea class="message" name="Message" row="5"></textarea>
+                    </p>
+                    <br/>
+                    <p class="full">
+                    <button onclick="validate()" type="submit" class="submit"><strong>Send</strong></button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        var myElement = document.querySelector("#datepicker");
+        myElement.style.backgroundColor = "#white";
+    $(document).ready(function(){
+        $('#datepicker').datepicker({
+            dateFormat: "yy-mm-dd",
+            changeDay: true,
+            changeMonth: true,
+            changeYear: true,
+        });
+    })
+    </script>
+    
+</body>
+</html>

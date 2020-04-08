@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: #92bde7;
+    color: #485e74;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1em;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+.company-info{
+    background:  #c9e6ff;
+}
+
+.ui-datepicker-calendar {
+    background-color: #fff;
+    padding: 10px;
+}
+.ui-datepicker-header {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+}
+ul li {
+    background-color: #7094b8;
+}
+ul li ul li {
+    display: none;
+}
+ul li:hover ul li {
+    display: block;
+}
+.brand {
+    text-align: center;
+}
+
+.brand span {
+    color: #fff;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.wrapper > *{
+    padding: 1em;
+}
+
+.company-info h3, .company-info ul{
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+.company-info h3{
+    text-align: center;
+}
+.company-info  {
+    text-align: center;
+    font-weight: bold;
+}
+.company-info  a{
+    color: #485e74
+}
+.company-info  a{
+    color: #485e74
+}
+.emoji{
+    width: 20px;
+    font-style: inherit;
+    text-decoration: none;
+}
+
+/*FORM STYLES*/
+.contact form {
+    display: grid;
+    grid-template-columns: 80fr 1fr;
+    grid-gap: 20px;
+    text-align: center;
+    
+}
+
+.contact form label {
+    display: block;
+    width: 100%;
+}
+
+.contact form p {
+    margin: 0;
+}
+
+.contact form .full {
+    grid-column: 1 / 2;
+}
+
+.contact form button, .contact form input, .contact form textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #485e74;
+    
+}
+
+.contact form button {
+    background: #ffc964;
+    padding: 10px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    outline: 2px;
+    width: 40%;
+    cursor: pointer;
+    font-size: 25px;
+    box-shadow: 
+  0 1px 2px #fff, /*bottom external highlight*/
+  0 -1px 1px #666, /*top external shadow*/ 
+  inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+  inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+  border-radius: 10px;
+  border: 3px solid rgb(207, 238, 250);
+}
+
+.contact form button:hover, .contact form button:focus {
+    background: #485e74;
+    color: #fff;
+    outline: 0; 
+    transition: background-color 2s easy-out;
+}
+
+.text {
+    justify-items: center;
+    text-align: center;
+}
+
+#time {
+    height: 20px;
+}
+
+#ddselect {
+    width: 800px;
+    height: 42px;
+    text-align: center;
+    border: 1px solid #485e74;
+}
+
+/*LARGE SCREEN*/
+@media(min-width: 500px){
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.wrapper{
+    padding: 2em;
+}
+.company-info h3, .company-info ul, .brand {
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+}
+ul li {
+    background-color: #7094b8;
+}
+ul li ul li {
+    display: none;
+}
+ul li:hover ul li {
+    display: block;
+}
+#time {
+    height: 20px;
+}
+
+}
